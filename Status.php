@@ -30,17 +30,4 @@ class Status
    return false;
   }
  }
- public function call()
- {
-  $fp = @fsockopen($this->localIP, 50080, $errno, $errstr);
-  if (!$fp) {
-   echo "$errstr ($errno)<br />\n";
-  } else {
-   fwrite($fp, "Request to Start " . $this->text() . " Server.");
-   while (fgets($fp, 128)) {
-    echo fgets($fp, 128);
-   }
-   fclose($fp);
-  }
- }
 }
