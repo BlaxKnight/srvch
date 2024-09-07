@@ -7,7 +7,7 @@
 
 <body>
   <font face="Arial">
-    <h3><?php echo $_SERVER['SERVER_ADDR']; ?> <a href="../">Server Status</a></h3>
+    <h3><?php echo $_SERVER['SERVER_ADDR']; ?></h3>
     <?php
     require_once './data.php';
     require_once './Status.php';
